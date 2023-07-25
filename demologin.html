@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+  <link  rel="stylesheet"  href="jquery.datetimepicker.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+  <style type="text/css">
+   *
+   {
+   	box-sizing: border-box;
+   }
+  	.mainsec
+  	{
+		background-color: #f2f2f2;
+		height: 750px;
+  	}
+  	.divmin
+  	{
+  		background-color: white;
+  		padding: 10px 10px;
+  		width: 80%;
+  		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		transform: translate(0%, 35%);
+		box-shadow: 2px 2px 15px 2px rgba(0,0,0,.3);
+		height: 70%;
+  	}
+  	.sideimg
+  	{
+  		width: 300px;
+		height: 340px;
+		margin-left: 120px;
+		margin-top: 60px;
+  	}
+  	.sideimg img
+  	{
+  		width: 100%;
+		height: 100%;
+		object-fit: contain;
+  	}
+  	.frmdiv
+  	{
+  		margin-top: 60px;
+  	}
+  	.frmdiv h3 
+  	{
+  		font-weight: bold;
+		font-size: 35px;
+  	}
+  	  .infrm input,textarea
+     {
+        padding: 10px 0;
+		margin-bottom: 30px;
+		width: 80%;
+		box-sizing: border-box;
+		box-shadow: none;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #e8e4e4;
+     }
+       .infrm .fdiv
+     {
+        position: relative;
+        margin-top: 20px;
+     }
+      .infrm .fdiv label
+	{
+		position: absolute;
+		top: 10px;
+		pointer-events: none;
+		left: 0;
+		color: #999;
+		transition: .5s;
+	}
+	 .infrm input:focus  label,.infrm input:valid  label
+	{
+		top: -12px;
+		left: 0;
+		color: #1779AF;
+		font-size: 15px;
+		font-weight: 501;
+	}
+	.infrm input:focus
+	{
+		border-bottom: 1px solid #1779AF;
+	}
+	.mtic 
+    {
+        font-size: 20px;
+        vertical-align: sub;
+    }
+    .submit
+    {
+    	background: #1779AF;
+		color: white;
+		width: 140px!important;
+		font-size: 17px;
+		padding: 10px 0px;
+		font-weight: 501;
+		border-radius: 3px;
+    }
+    .titsoc
+      {
+        text-align: center;
+		font-size: 15px;
+		width: 190px;
+		margin-left: -10px;
+		margin-top: 40px;
+      }
+      .titsoc p{
+        color: #958f8f;
+        font-weight: 501;
+      }
+      .titsoc .fb
+      {
+        color: #405ea7;
+        background-color: white;
+        font-size: 32px;
+      }
+      .google {
+        width: 20px;
+        height: 20px;
+     }
+     .logo
+     {
+     	position: absolute;
+		left: 43%;
+     }
+      .logo img 
+      {
+        width: 140px;
+		height: 80px;
+		margin-top: 60px;
+		margin-bottom: -40px;
+      }
+  </style>
+</head>
+<body>
+<div class="container-lg-fluid">
+	<div class="mainsec">
+		 <div class="logo">
+               <a href="#"><img src="images/about.png"></a>
+          </div>
+		<div class="divmin">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="sideimg">
+						<img src="images/about.png">
+					</div>
+					<div style="margin-left: 215px;margin-top: 40px;">
+						<a href="jobsignup.php" style="text-decoration: underline;color: #1779AF;font-weight: 501;">Create account</a>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="frmdiv">
+						<h3>Log In</h3>
+						<div class="infrm" style="margin-top: 30px;">
+							<form>
+								<div class="fdiv">
+                                    <input type="text" name="" id="stsid" maxlength="50" required ><p id="sterr"  class="errc"></p>
+                                    <label id="statlbl"><span class="material-icons mtic">person</span>&nbsp;&nbsp;Username</label>
+                                </div>
+                                <div class="fdiv">
+                                    <input type="text" name="" id="stsid" maxlength="50" required ><p id="sterr"  class="errc"></p>
+                                    <label id="statlbl"><span class="material-icons mtic">lock</span>&nbsp;&nbsp;Password</label>
+                                </div>
+                                <div>
+                                	<input type="submit" class="submit"name="" value="Login">
+                                </div>
+							</form>
+<!-- 							 <div class="titsoc">                                     
+							 	<p><span>Or Login with</span>&nbsp;&nbsp;<img class="google" src="image/googleic.png">&nbsp;&nbsp;<img src="image/facebook.png" class="google">&nbsp;&nbsp;<img src="image/linkedin.png" class="google"></p>
+                       		 </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
